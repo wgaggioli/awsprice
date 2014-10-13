@@ -1,5 +1,5 @@
 AWS Price Analysis
-----
+====
 
 A simple SPA to analyze AWS On Demand and Spot prices for linux instances
 across the available regions. Uses the AWS API endpoints for pricing
@@ -9,12 +9,12 @@ information:
   - On Demand: [http://a0.awsstatic.com/pricing/1/ec2/linux-od.min.js](http://a0.awsstatic.com/pricing/1/ec2/linux-od.min.js)
 
 Install
-====
+---
 
     npm install
 
 Run
-===
+---
 
     node server.js
 
