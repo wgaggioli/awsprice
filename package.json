@@ -1,0 +1,19 @@
+{
+    "name": "awsprice",
+    "description": "Simple Web App to analyze aws instance price information",
+    "version": "0.0.1",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wgaggioli/awsprice"
+    },
+    "author": "Will Gaggioli",
+    "license": "Beerware",
+    "bugs": {
+        "url": "https://github.com/wgaggioli/awsprice/issues"
+    },
+    "homepage": "http://wgaggioli.github.io/awsprice",
+    "dependencies": {
+        "express": "4.9"
+    }
+}

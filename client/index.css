@@ -1,0 +1,120 @@
+body {
+    font-family: "HelveticaNeueLight","Helvetica",Helvetica,Arial,sans-serif;
+}
+h1 {
+    font-size: 2em;
+}
+h3 {
+    color: #e47911;
+    font-size: 1.4em;
+}
+header {
+    width: 100%;
+    height: 68px;
+    padding: 8px 10px 18px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #f7f7f7;
+    -webkit-box-shadow: #e6e6e6 0 1px 3px;
+    -moz-box-shadow: #e6e6e6 0 1px 3px;
+    box-shadow: #e6e6e6 0 1px 3px;
+}
+header img.logo {
+    max-height: 50px;
+    vertical-align: top;
+}
+header h1 {
+    margin: 10px 0 0 5px;
+    display: inline-block;
+}
+#mainNav {
+    padding-left: 0;
+    padding-right: 0;
+}
+nav ul.row {
+    list-style-type: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    width: 33%;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    /* border-bottom-left-radius: 5px;*/
+    background-color: #ededed;
+    text-align: center;
+}
+nav ul li:hover {
+    border-bottom: 2px solid #2a6496;
+}
+nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    color: #101010;
+}
+nav ul li a:hover {
+    text-decoration: none;
+}
+nav ul li.active {
+    background-color: #fff;
+    border-bottom-style: none;
+}
+nav ul li.active a {
+    color: #2a6496;
+}
+#mainContent {
+    padding: 0 10px;
+}
+#loadingGif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+#mainContent p.instruction {
+    margin-top: -8px;
+    font-size: 90%;
+    font-style: italic;
+}
+.instance-view-container th {
+    cursor: pointer;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.instance-view-container th:hover {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #2a6496 !important;
+}
+.instance-view-container th.active {
+    border-top: 1px solid #2a6496 !important;
+}
+.spots-container h3 {
+    margin-bottom: 4px;
+}
+.spots-container a.drill-down {
+    padding: 3px 6px;
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
+}
+.plot {
+    height: 180px;
+}
+div.plotToolTip {
+    position: absolute;
+    z-index: 100000;
+    background: rgba(19, 19, 19, 0.70);
+    padding: 1ex 1em;
+    color: #fff;
+    text-align: left;
+    border: 2px solid #fff;
+    border-radius: 0.7em;
+    box-shadow: 0 1ex 1em rgba(19, 19, 19, 0.5);
+    font-size: 0.9em;
+}
+div.region-line-plot {
+    height: 500px;
+}

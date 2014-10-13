@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/index.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="/img/aws-logo.png" alt="">
+            <h1>AWS Price Analysis</h1>
+        </header>
+        <section id="mainContainer">
+            <nav id="mainNav" class="container-fluid">
+                <ul class="row">
+                    <li class="active col-md-4 spots-nav-item">
+                        <a href="/spot_spreads">On Demand / Spot Spread</a>
+                    </li>
+                    <li class="col-md-4 instances-nav-item">
+                        <a href="/instances">Sortable Instances Table</a>
+                    </li>
+                    <li class="col-md-4 regions-nav-item">
+                        <a href="/regions">Regions</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="mainContent">
+                <img id="loadingGif" src="/img/loading.gif" alt="Loading...">
+            </div>
+        </section>
+        <div id="templatesContainer" hidden>
+            <div id="instancesTableTemplate">
+                <h3>All Available Instances</h3>
+                <p class="instruction">Click on a header to sort</p>
+                <div class="panel panel-default table-container">
+                    <table class="table table-hover table-bordered table-responsive">
+                        <thead><tr></tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <script type="text/template" id="plotContainerTemplate">
+                <div class="plot-container">
+                    <h3><%- title %></h3>
+                    <%= subtitle %>
+                    <div class="plot"></div>
+                </div>
+            </script>
+            <script type="text/template" id="hoverLabelTemplate">
+                <span><%- region %></span><br>
+                <span>Demand Price: <%- demandPrice %></span><br>
+                <span>Spot Price: <%- spotPrice %></span><br>
+                <span>Spot Discount: <%- spotDiscount %>%</span><br>
+            </script>
+        </div>
+        <script data-main="/main" src="/js/require.js"></script>
+    </body>
+</html>
