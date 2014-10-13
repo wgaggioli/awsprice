@@ -251,8 +251,9 @@ define(
                 /* Render Bar Graph */
                 barContainer = $(this.plotContainerTemplate({
                     title: "Average Demand Price Deviation",
-                    subtitle: '<p class="instruction">Displays the average % ' +
-                        'difference from the mean for each instance</p>'
+                    subtitle: '<p class="instruction">Displays the average for ' +
+                        'a region of the % difference from the mean for each ' +
+                        'instance.</p>'
                 })).appendTo(this.$el);
                 barView = new RegionBarView({
                     "el": barContainer.find(".plot").addClass("region-bar-plot").get(0),
@@ -264,7 +265,8 @@ define(
                 lineContainer = $(this.plotContainerTemplate({
                     title: "Price by Instance",
                     subtitle: '<p class="instruction">Displays the price ' +
-                        'by instance for each region</p>'
+                        'by instance for each region. Click and drag to zoom, ' +
+                        'double click to reset.</p>'
                 })).appendTo(this.$el);
                 lineView = new RegionLineView({
                     "el": lineContainer.find(".plot").addClass("region-line-plot").get(0),

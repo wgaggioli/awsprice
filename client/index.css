@@ -4,6 +4,10 @@ body {
 h1 {
     font-size: 2em;
 }
+h2 {
+    font-size: 1.7em;
+    color: #e47911;
+}
 h3 {
     color: #e47911;
     font-size: 1.4em;

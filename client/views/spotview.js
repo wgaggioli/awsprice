@@ -146,8 +146,7 @@ define(
                 var type;
                 router.navigate(evt.target.getAttribute("href"), {"trigger": false});
                 type = evt.target.getAttribute("href").split("spot_spreads/")[1];
-                this.$el.empty();
-                this.renderByType(type);
+                this.render([type]);
                 return false;
             },
             _renderType: function (type, regionGroups) {
@@ -160,7 +159,7 @@ define(
                             memo["spotPrice"] += model.get("spotPrice");
                             memo["demandPrice"] += model.get("demandPrice");
                             return memo;
-                        }, {"spotPrice": 0., "demandPrice": 0, "region": region});
+                        }, {"spotPrice": 0, "demandPrice": 0, "region": region});
                         datum.spotPrice /= regionGroups[region].length;
                         datum.demandPrice /= regionGroups[region].length;
                         spreads.push(datum);
@@ -207,9 +206,11 @@ define(
             },
             render: function (args) {
                 var type = args[0];
-                this.$el.empty();
-                if (type === null ){
-                    this.renderAggregated()
+                this.$el.html('<h2>Demand / Spot Spread Analysis</h2>' +
+                    '<p class="instruction">Plots the demand price vs. the ' +
+                    'spot price across regions and instance types</p><hr>');
+                if (type === null) {
+                    this.renderAggregated();
                 } else {
                     this.renderByType(type);
                 }
